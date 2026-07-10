@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#7a0019" />
+  <title>Iniyazh Turns TWO</title>
+  <link rel="stylesheet" href="css/book.css" />
+</head>
+<body>
+  <div class="forest-glow" aria-hidden="true"></div>
+  <div class="decor apple apple-1" aria-hidden="true">🍎</div>
+  <div class="decor apple apple-2" aria-hidden="true">🍎</div>
+  <div class="decor butterfly" aria-hidden="true">🦋</div>
+  <div class="fireflies" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <div class="scene" aria-label="Interactive birthday storybook">
+      <div class="book" id="book">
+        <section class="page cover" data-page="0">
+          <div class="content cover-content">
+            <div class="cover-crown">👑</div>
+            <p class="eyebrow">A fairytale celebration</p>
+            <h1>Iniyazh<br />Turns TWO</h1>
+            <div class="gold-rule"></div>
+            <p>22 July 2026</p>
+            <button class="royal-button" id="start" type="button">Open Storybook</button>
+          </div>
+        </section>
+
+        <section class="page" data-page="1">
+          <div class="content story-page">
+            <p class="chapter">Chapter One</p>
+            <h2>Once Upon a Time…</h2>
+            <p>
+              A little princess named <strong>Iniyazh</strong> came into our lives
+              and filled every day with smiles, wonder and love.
+            </p>
+            <div class="story-ornament">✨ 🍎 ✨</div>
+          </div>
+        </section>
+
+        <section class="page" data-page="2">
+          <div class="content princess-page">
+            <div class="royal-frame">
+              <img src="images/hero.jpg" alt="Iniyazh dressed as a fairytale princess" />
+            </div>
+            <h2>Our Little Princess</h2>
+            <p>Two wonderful years of hugs, laughter and magical memories.</p>
+          </div>
+        </section>
+
+        <section class="page" data-page="3">
+          <div class="content">
+            <p class="chapter">A royal message</p>
+            <h2>Invitation Video</h2>
+            <div class="video-frame">
+              <video controls playsinline preload="metadata" poster="images/hero.jpg">
+                <source src="videos/invitation.mov" type="video/mp4" />
+                Your browser does not support embedded video.
+              </video>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" data-page="4">
+          <div class="content">
+            <p class="chapter">Treasured moments</p>
+            <h2>Our Magical Memories</h2>
+            <div class="polaroids">
+              <figure><img src="images/photo4.jpeg" alt="Memory one" onerror="this.src='images/hero.jpg'" /><figcaption>Little Smile</figcaption></figure>
+              <figure><img src="images/photo2.jpeg" alt="Memory two" onerror="this.src='images/hero.jpg'" /><figcaption>Happy Moments</figcaption></figure>
+              <figure><img src="images/photo5.jpeg" alt="Memory three" onerror="this.src='images/hero.jpg'" /><figcaption>Sweet Memories</figcaption></figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" data-page="5">
+          <div class="content">
+            <p class="chapter">The royal celebration</p>
+            <p class="chapter">Take place at</p>
+            <h4 class="chapter">18, Smiths Avenue <br>LE4 8LS</h4>
+            <h2>Counting Down</h2>
+            <p class="date-line">📅 22 July 2026</p>
+            <div class="royal-clock" id="royalClock" aria-live="polite">
+              <div class="clock-crown">👑</div>
+              <div class="clock-grid">
+                <div class="clock-unit"><strong id="days">00</strong><span>Days</span></div>
+                <div class="clock-unit"><strong id="hours">00</strong><span>Hours</span></div>
+                <div class="clock-unit"><strong id="minutes">00</strong><span>Minutes</span></div>
+                <div class="clock-unit"><strong id="seconds">00</strong><span>Seconds</span></div>
+              </div>
+              <p>Until Iniyazh’s royal celebration ✨</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" data-page="6">
+          <div class="content finale-page">
+            <div class="finale-icon">🏰</div>
+            <h2>Be Our Guest</h2>
+            <p>Your presence and blessings will make this day truly magical.</p>
+            <a class="royal-button link-button" id="rsvpLink" href="" target="_blank" rel="noopener">RSVP on WhatsApp</a>
+            <a class="text-link" id="wishesLink" href="#" target="_blank" rel="noopener">Leave a birthday wish</a>
+            <p class="ending">And they celebrated happily ever after…</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <nav class="controls" aria-label="Storybook controls">
+      <button id="prev" type="button" aria-label="Previous page">◀</button>
+      <span id="pageCounter">1 / 7</span>
+      <button id="next" type="button" aria-label="Next page">▶</button>
+    </nav>
+  </main>
+
+  <button id="musicBtn" class="music-button" type="button" aria-label="Play background music">🎵</button>
+  <audio id="music" loop preload="none">
+    <source src="music/bridgerton.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="config.js"></script>
+  <script src="js/book.js"></script>
+</body>
+</html>
